@@ -111,6 +111,12 @@ nav ul li a {
     font-weight: bold;
     border-radius: 5px;
 }
+.about {
+    height: 60vh;
+    text-align: center;
+    align-items: center;
+    position: relative;
+}
 
 footer {
     background-color: #333;
