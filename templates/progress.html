@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="static/base.css" />
+    <link rel="stylesheet" href="static/progress.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Fitness Progress Dashboard</title>
+    <!-- Include Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="container bebas">
+        <div class="logo bebas">
+          <h1 style="font-size: 30px">CALORIE CRUSH</h1>
+        </div>
+        <nav>
+          <ul>
+            <li class="raleway"><a href="/">Home</a></li>
+            <li class="raleway"><a href="/fitness-plan-page">Fitness Plan</a></li>
+            <li class="raleway"><a href="/diet-plan-page">Diet Plan</a></li>
+            <li class="raleway"><a href="/community-page">Community</a></li>
+            <li class="raleway"><a href="/progress-page">Progress</a></li>
+            <li class="raleway login-btn"><a href="/login-page">Log In</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="dashboard">
+      <!-- Dashboard Overview -->
+      <div class="dashboard-overview">
+        <div class="overview-card">
+          <h3>Total Workout Time</h3>
+          <p>245 Minutes</p>
+        </div>
+        <div class="overview-card">
+          <h3>Body Weight</h3>
+          <p>65 kg</p>
+        </div>
+        <div class="overview-card">
+          <h3>Goal Completion</h3>
+          <p>75%</p>
+        </div>
+        <div class="overview-card">
+          <button class="btn">Log New Workout</button>
+        </div>
+      </div>
+
+      <!-- Charts Section -->
+      <div class="chart-section">
+        <div class="chart-container">
+          <h3>Workout Progress (Last 7 Days)</h3>
+          <canvas id="workoutChart"></canvas>
+        </div>
+
+        <div class="chart-container">
+          <h3>Body Measurements</h3>
+          <canvas id="bodyMeasurementsChart"></canvas>
+        </div>
+
+        <div class="chart-container">
+          <h3>Goal Progress</h3>
+          <canvas id="goalChart"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <footer class="raleway">
+      <div class="container">
+        <p>2024 Calorie Crush. Created with ❤️ by Abhimanyu and Suyash.</p>
+        <p>For any inquiries, feel free to <a style="color:white" href="#contact">contact us</a></p>
+      </div>
+    </footer>
+
+    <!-- Chart.js Script -->
+    <script>
+      // Modern, compact chart options
+      const modernOptions = {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            position: 'bottom',
+            labels: {
+              font: {
+                size: 14
+              }
+            }
+          },
+          tooltip: {
+            backgroundColor: '#333',
+            titleColor: '#fff',
+            bodyColor: '#fff'
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              font: {
+                size: 12
+              }
+            }
+          },
+          x: {
+            ticks: {
+              font: {
+                size: 12
+              }
+            }
+          }
+        },
+        elements: {
+          line: {
+            tension: 0.4
+          },
+          bar: {
+            borderRadius: 10
+          }
+        }
+      };
+
+      // Workout Progress Chart
+      var ctxWorkout = document.getElementById('workoutChart').getContext('2d');
+      var workoutChart = new Chart(ctxWorkout, {
+        type: 'bar',
+        data: {
+          labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+          datasets: [{
+            label: 'Minutes of Exercise',
+            data: {{ workout_data|tojson }},
+            backgroundColor: '#28a745',
+            borderRadius: 10
+          }]
+        },
+        options: modernOptions
+      });
+
+      // Body Measurements Chart
+      var ctxBody = document.getElementById('bodyMeasurementsChart').getContext('2d');
+      var bodyMeasurementsChart = new Chart(ctxBody, {
+        type: 'line',
+        data: {
+          labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
+          datasets: [{
+            label: 'Weight (kg)',
+            data: {{ body_measurements|tojson }},
+            borderColor: '#28a745',
+            fill: false,
+            tension: 0.4
+          }]
+        },
+        options: modernOptions
+      });
+
+      // Goal Progress Chart
+      var ctxGoal = document.getElementById('goalChart').getContext('2d');
+      var goalChart = new Chart(ctxGoal, {
+        type: 'doughnut',
+        data: {
+          labels: ['Completed', 'Remaining'],
+          datasets: [{
+            data: {{ goal_progress|tojson }},
+            backgroundColor: ['#28a745', '#ddd'],
+            cutout: '80%'
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              position: 'bottom',
+              labels: {
+                font: {
+                  size: 14
+                }
+              }
+            }
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

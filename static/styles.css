@@ -1,0 +1,352 @@
+/* Base and Reset Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Typography */
+.bebas {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.raleway {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2rem;
+}
+
+/* Header Styles */
+header {
+  background-color: #fff;
+  border-bottom: 2px solid #ddd;
+  padding: 15px 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  color: black;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 10px 15px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #28a745;
+}
+
+/* Hero Section */
+#hero {
+  position: relative;
+  background: url("https://cdn.b12.io/media/39580282-3cb4-11e8-bbb9-0242ac11000f-jpg-hero_image.jpeg")
+    no-repeat center center/cover;
+  background-attachment: fixed;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+/* Dark overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero-content {
+  z-index: 2;
+}
+
+.hero-content h2 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.hero-content p {
+  margin: 20px 0;
+  font-size: 1.2rem;
+}
+
+.btn {
+  background-color: #28a745;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #218838;
+}
+
+/* About Section */
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  background-color: white;
+}
+
+.about-text {
+  width: 30%;
+  padding-right: 20px;
+  margin-left: 10%;
+}
+
+.about-image {
+  width: 30%;
+  padding-left: 20px;
+  margin-right: 10%;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 13px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Feature Summary Section */
+.feature-summary {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.feature-summary h4 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.feature-summary p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.feature-summary .btn {
+  background-color: transparent;
+  color: #28a745;
+  padding: 10px 20px;
+  border: 2px solid #28a745;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.feature-summary .btn:hover {
+  background-color: #28a745;
+  color: white;
+}
+
+/* Contact Section */
+#contact {
+  padding: 2rem 0;
+  background-color: #f9f9f9;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form label {
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+form input[type="submit"] {
+  background-color: #28a745;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+form input[type="submit"]:hover {
+  background-color: #218838;
+}
+
+/* Footer Styles */
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Diet Plan Section */
+#diet-plan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+  background-color: #f4f4f4;
+}
+
+.diet-plan-content {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%;
+}
+
+.diet-plan-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #28a745;
+  text-align: center;
+}
+
+.diet-plan-content p {
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.diet-plan-content ul {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+.diet-plan-content ul li {
+  margin-bottom: 10px;
+}
+
+.diet-plan-content .btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #28a745;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.diet-plan-content .btn:hover {
+  background-color: #218838;
+}
+
+#diet-result {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #555;
+  text-align: center;
+}
+
+/* Fitness Plan Section */
+#fitness-plan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 50px 0;
+  background-color: #f4f4f4;
+}
+
+.fitness-plan-content {
+  background-color: #fff;
+  padding: 40px;
+  max-width: 800px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.fitness-plan-content h2 {
+  font-size: 2.5rem;
+  color: #28a745;
+  margin-bottom: 20px;
+}
+
+.fitness-plan-content p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.result-area {
+  margin-top: 30px;
+  font-size: 1.2rem;
+  color: #555;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+
+

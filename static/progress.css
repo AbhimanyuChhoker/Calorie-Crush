@@ -1,0 +1,85 @@
+/* Dashboard Layout */
+#dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+    background-color: #f4f4f4;
+  }
+  
+/* Overview Cards */
+.dashboard-overview {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 80%;
+    margin-bottom: 40px;
+  }
+  
+  .overview-card {
+    background-color: #fff;
+    padding: 15px; /* Reduced padding to move content up */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 22%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top */
+    align-items: center;
+  }
+  
+  .overview-card h3 {
+    font-size: 1.2rem;
+    color: #28a745;
+    margin-bottom: 5px; /* Reduced margin */
+  }
+  
+  .overview-card p {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .overview-card .btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    margin-top: 10px; /* Reduced margin to move button up */
+  }
+  
+  .overview-card .btn:hover {
+    background-color: #218838;
+  }
+/* Charts Section */
+.chart-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px; /* Increased gap between chart containers */
+    width: 80%;
+    margin-bottom: 60px; /* Added bottom margin to avoid footer overlap */
+  }
+  
+  .chart-container {
+    position: relative;
+    width: 100%;
+    height: 350px; /* Increased chart height for better display */
+  }
+  
+  .chart-container h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center; /* Center the chart titles */
+  }
+  
+  canvas {
+    max-width: 100%;
+    height: auto;
+  }
+    

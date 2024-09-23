@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Login</title>
+    <link rel="stylesheet" href="static/base.css">
+    <link rel="stylesheet" href="static/login.css">
+  </head>
+  <body>
+    <header>
+      <div class="container bebas">
+        <div class="logo bebas">
+          <h1 style="font-size: 30px">CALORIE CRUSH</h1>
+        </div>
+        <nav>
+          <ul>
+            <li class="raleway"><a href="/">Home</a></li>
+            <li class="raleway"><a href="/fitness-plan-page">Fitness Plan</a></li>
+            <li class="raleway"><a href="/diet-plan-page">Diet Plan</a></li>
+            <li class="raleway"><a href="/community-page">Community</a></li>
+            <li class="raleway"><a href="/progress-page">Progress</a></li>
+            <li class="raleway login-btn"><a href="/login">Log In</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="login">
+      <div class="login-container raleway">
+        <h2>Log In to Your Account</h2>
+
+        <form action="/login" method="POST">
+          <div class="input-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          </div>
+
+          <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+          </div>
+
+          <button class="btn" type="submit">Log In</button>
+
+          <div class="links">
+            <a href="/signup">Don't have an account? Sign Up</a>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer class="raleway">
+      <div class="container">
+        <p>2024 Calorie Crush. Created with ❤️ by Abhimanyu and Suyash.</p>
+        <p>For any inquiries, feel free to <a style="color:white" href="#contact">contact us</a></p>
+      </div>
+    </footer>
+  </body>
+</html>
+  

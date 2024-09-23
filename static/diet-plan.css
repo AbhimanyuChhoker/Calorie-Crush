@@ -1,0 +1,64 @@
+/* Diet Plan Section */
+#diet-plan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+  background-color: #f4f4f4;
+}
+
+.diet-plan-content {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%;
+  text-align: center; /* Center content inside the section */
+}
+
+.diet-plan-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #28a745;
+}
+
+.diet-plan-content p {
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.diet-plan-content ul {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+.diet-plan-content ul li {
+  margin-bottom: 10px;
+}
+
+/* Centering the button */
+.diet-plan-content .btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #28a745;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  margin-top: 20px;
+  text-align: center;  /* Ensure the button is centered */
+}
+
+.diet-plan-content .btn:hover {
+  background-color: #218838;
+}
+
+#diet-result {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #555;
+  text-align: center;
+}

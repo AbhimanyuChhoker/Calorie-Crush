@@ -1,0 +1,52 @@
+/* Fitness Plan Section */
+#fitness-plan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 50px 0;
+  background-color: #f4f4f4;
+}
+
+.fitness-plan-content {
+  background-color: #fff;
+  padding: 40px;
+  max-width: 800px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.fitness-plan-content h2 {
+  font-size: 2.5rem;
+  color: #28a745;
+  margin-bottom: 20px;
+}
+
+.fitness-plan-content p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.btn {
+  background-color: #28a745;
+  color: white;
+  padding: 12px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #218838;
+}
+
+#fitness-result {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #555;
+}
