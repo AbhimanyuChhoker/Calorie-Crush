@@ -1,55 +1,291 @@
 /* Community Section */
 #community {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 50px 0;
-    background-color: #f4f4f4;
-  }
-  
-  .community-content {
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    width: 100%;
-  }
-  
-  .community-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #28a745;
-    text-align: center;
-  }
-  
-  .community-content p {
-    margin-bottom: 15px;
-    color: #555;
-  }
-  
-  .community-content ul {
-    list-style: disc;
-    margin-left: 20px;
-  }
-  
-  .community-content ul li {
-    margin-bottom: 10px;
-  }
-  
-  .community-content .btn {
-    display: inline-block;
-    padding: 12px 30px;
-    background-color: #28a745;
-    color: #fff;
-    border-radius: 5px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    cursor: pointer;
-  }
-  
-  .community-content .btn:hover {
-    background-color: #218838;
-  }
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+  background-color: #f4f4f4;
+}
+
+.community-content {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  width: 100%;
+}
+
+.community-content h2 {
+  font-size: 2.5rem;
+  color: #28a745;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.community-content p {
+  font-size: 1.2rem;
+  color: #555;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Create Post Section */
+#create-post {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+  background-color: #f4f4f4;
+}
+
+#create-post .community-content {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+}
+
+#create-post h2 {
+  font-size: 2.5rem;
+  color: #28a745;
+  margin-bottom: 20px;
+}
+
+#create-post p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* Form Styling */
+#create-post form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+#create-post form .form-group {
+  width: 100%;
+}
+
+#create-post form label {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#create-post form input[type="text"],
+#create-post form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+#create-post form input[type="text"]:focus,
+#create-post form textarea:focus {
+  border-color: #28a745;
+  outline: none;
+}
+
+/* Button Styling */
+#create-post form button {
+  padding: 12px 30px;
+  background-color: #28a745;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#create-post form button:hover {
+  background-color: #218838;
+}
+
+/* Success Message */
+#success-message {
+  display: none;
+  color: #28a745;
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+/* Blog Grid */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.blog-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.blog-card h3 {
+  font-size: 1.5rem;
+  color: #28a745;
+  margin-bottom: 10px;
+}
+
+.blog-card .author {
+  font-size: 1rem;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.blog-card .excerpt {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.blog-card .btn {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.blog-card .btn:hover {
+  background-color: #218838;
+}
+
+/* Post Detail Section */
+#post-detail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+  background-color: #f4f4f4;
+}
+
+#post-detail .community-content {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%;
+}
+
+#post-detail h2 {
+  font-size: 2.5rem;
+  color: #28a745;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#post-detail .author {
+  font-size: 1rem;
+  color: #888;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#post-detail .post-content {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  text-align: justify;
+}
+
+#post-detail hr {
+  margin: 30px 0;
+}
+
+/* Comments Section */
+#post-detail .comments {
+  list-style: none;
+  padding-left: 0;
+}
+
+#post-detail .comments li {
+  background-color: #f9f9f9;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+#post-detail .comments li strong {
+  color: #28a745;
+  font-size: 1.1rem;
+}
+
+/* Comment Form Styling */
+#post-detail form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#post-detail form input[type="text"],
+#post-detail form textarea {
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+#post-detail form textarea {
+  resize: none;
+}
+
+#post-detail form button {
+  padding: 12px 30px;
+  background-color: #28a745;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#post-detail form button:hover {
+  background-color: #218838;
+}
+
+/* Center the button container */
+.new-post-button {
+  text-align: center; /* Use this to center the button horizontally */
+  margin-bottom: 30px; /* Add spacing below the button */
+}
+
+/* General Button Styling */
+.btn {
+  display: inline-block; /* Ensure it's treated as an inline element */
+  padding: 12px 30px;
+  background-color: #28a745; /* Keep your brand color, or change it if needed */
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.btn:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}

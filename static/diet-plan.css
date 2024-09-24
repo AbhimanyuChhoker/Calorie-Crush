@@ -49,7 +49,7 @@
   transition: background-color 0.3s ease, color 0.3s ease;
   cursor: pointer;
   margin-top: 20px;
-  text-align: center;  /* Ensure the button is centered */
+  text-align: center; /* Ensure the button is centered */
 }
 
 .diet-plan-content .btn:hover {

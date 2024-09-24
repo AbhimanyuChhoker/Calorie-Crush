@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>{{ post.title }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='community.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='base.css') }}"
+    />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <div class="container bebas">
+        <div class="logo bebas">
+          <h1 style="font-size: 30px">CALORIE CRUSH</h1>
+        </div>
+        <nav>
+          <ul>
+            <li class="raleway"><a href="/">Home</a></li>
+            <li class="raleway">
+              <a href="/fitness-plan-page">Fitness Plan</a>
+            </li>
+            <li class="raleway"><a href="/diet-plan-page">Diet Plan</a></li>
+            <li class="raleway"><a href="/community-page">Community</a></li>
+            <li class="raleway"><a href="/progress-page">Progress</a></li>
+            <li class="raleway login-btn"><a href="/login-page">Log In</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Post Detail Section -->
+    <section id="post-detail">
+      <div class="community-content raleway">
+        <h2>{{ post.title }}</h2>
+        <p class="author">By {{ post.author }}</p>
+        <p class="post-content">{{ post.content }}</p>
+
+        <hr />
+
+        <!-- Comment Section -->
+        <h3>Comments</h3>
+        <ul class="comments">
+          {% for comment in post.comments %}
+          <li><strong>{{ comment.author }}:</strong> {{ comment.comment }}</li>
+          {% endfor %}
+        </ul>
+
+        <hr />
+
+        <!-- Add Comment Form -->
+        <h3>Add a Comment</h3>
+        <form action="/add-comment/{{ post.id }}" method="POST">
+          <input type="text" name="author" placeholder="Your Name" required />
+          <textarea
+            name="comment"
+            placeholder="Write your comment..."
+            rows="4"
+            required
+          ></textarea>
+          <button type="submit" class="btn">Submit Comment</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="raleway">
+      <div class="container">
+        <p>2024 Calorie Crush. Created with ❤️ by Abhimanyu and Suyash.</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,79 +1,87 @@
 /* Base and Reset Styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Raleway', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
-  }
-  
-  /* Typography */
-  .bebas {
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  .raleway {
-    font-family: "Raleway", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.2rem;
-  }
-  
-  /* Header Styles */
-  header {
-    background-color: #fff;
-    border-bottom: 2px solid #ddd;
-    padding: 15px 0;
-  }
-  
-  .container {
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo h1 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 2rem;
-    color: black;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    padding: 10px 15px;
-    transition: color 0.3s ease;
-  }
-  
-  nav ul li a:hover {
-    color: #28a745;
-  }
-  
-  /* Footer Styles */
-  footer {
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-  }
-  
-  footer p {
-    margin: 0;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Typography */
+/* Apply Raleway globally except for the logo */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+li,
+input,
+button,
+textarea {
+  font-family: "Raleway", sans-serif;
+}
+
+/* Keep Bebas Neue for the logo */
+.logo h1 {
+  font-family: "Bebas Neue", sans-serif !important;
+}
+
+/* Header Styles */
+header {
+  background-color: #fff;
+  border-bottom: 2px solid #ddd;
+  padding: 15px 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h1 {
+  font-size: 2rem;
+  color: black;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 10px 15px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #28a745;
+}
+
+/* Footer Styles */
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+footer p {
+  margin: 0;
+}
